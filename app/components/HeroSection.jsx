@@ -4,7 +4,13 @@ import Image from "next/image";
 import { getWhatsAppLink } from "@/config/site";
 
 export default function HeroSection() {
-  const whatsappUrl = getWhatsAppLink("Hola quiero un usuario");
+  const whatsappUrl = getWhatsAppLink("Hola Ganamos Net, quiero contactar a un cajero ahora.");
+
+  const handleWhatsAppClick = () => {
+    if (typeof window !== "undefined" && window.fbq) {
+      window.fbq("track", "Contact");
+    }
+  };
 
   return (
     <section className="flex flex-col items-center text-center space-y-8 w-full relative">
@@ -54,13 +60,14 @@ export default function HeroSection() {
         <a
           className="btn-green text-black font-extrabold text-lg sm:text-xl px-8 py-5 rounded-full flex items-center justify-center space-x-3 w-full shadow-2xl group hover:no-underline"
           href={whatsappUrl}
+          onClick={handleWhatsAppClick}
           target="_blank"
           rel="noopener noreferrer"
         >
           <svg className="h-7 w-7 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
             <path
               clipRule="evenodd"
-              d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.183-.573c.978.58 1.711.848 3.146.848 3.182 0 5.767-2.585 5.767-5.766 0-3.18-2.585-5.766-5.767-5.766zm3.332 8.358c-.145.417-1.042.843-1.442.884-.33.033-.787.05-1.936-.425-1.385-.572-2.275-2.001-2.342-2.091-.067-.09-.56-.745-.56-1.421 0-.676.353-1.009.479-1.139.125-.13.271-.162.361-.162.09 0 .18 0 .26.004.084.004.195-.034.305.233.116.279.394.96.43.1037.035.076.059.166.012.261-.046.095-.07.153-.139.231-.069.078-.145.166-.204.229-.067.067-.138.14-.06.275.078.134.347.572.74 1.019.508.577.944.757 1.08.825.136.068.215.056.296-.036.08-.093.346-.401.438-.539.09-.138.18-.115.305-.069.124.047.788.371.923.439.135.068.225.102.257.159.034.056.034.33-.111.748z"
+              d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.183-.573c.978.58 1.711.848 3.146.848 3.182 0 5.767-2.585 5.767-5.766 0-3.18-2.585-5.766-5.767-5.767zm3.332 8.358c-.145.417-1.042.843-1.442.884-.33.033-.787.05-1.936-.425-1.385-.572-2.275-2.001-2.342-2.091-.067-.09-.56-.745-.56-1.421 0-.676.353-1.009.479-1.139.125-.13.271-.162.361-.162.09 0 .18 0 .26.004.084.004.195-.034.305.233.116.279.394.96.43.1037.035.076.059.166.012.261-.046.095-.07.153-.139.231-.069.078-.145.166-.204.229-.067.067-.138.14-.06.275.078.134.347.572.74 1.019.508.577.944.757 1.08.825.136.068.215.056.296-.036.08-.093.346-.401.438-.539.09-.138.18-.115.305-.069.124.047.788.371.923.439.135.068.225.102.257.159.034.056.034.33-.111.748z"
               fillRule="evenodd"
             ></path>
           </svg>
