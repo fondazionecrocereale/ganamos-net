@@ -4,7 +4,7 @@ import Image from "next/image";
 import { getWhatsAppLink } from "@/config/site";
 
 export default function HeroSection() {
-  const whatsappUrl = getWhatsAppLink("Hola Ganamos Net, quiero contactar a un cajero ahora.");
+  const whatsappUrl = getWhatsAppLink("Hola quiero usuario");
 
   const handleWhatsAppClick = () => {
     if (typeof window !== "undefined" && window.fbq) {
