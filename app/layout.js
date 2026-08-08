@@ -44,6 +44,9 @@ export default function RootLayout({ children }) {
                 s.parentNode.insertBefore(t,s)}(window, document,'script',
                 'https://connect.facebook.net/en_US/fbevents.js');
                 fbq('init', '872310448557591');
+              }
+              if (!window.__pageview_sent) {
+                window.__pageview_sent = true;
                 fbq('track', 'PageView', {}, { test_event_code: 'TEST6108' });
               }
             `,
