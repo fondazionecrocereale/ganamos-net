@@ -33,8 +33,8 @@ export default function RootLayout({ children }) {
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
-              if (!window.__fbq_initialized) {
-                window.__fbq_initialized = true;
+              if (!window._fbq_loaded_) {
+                window._fbq_loaded_ = true;
                 !function(f,b,e,v,n,t,s)
                 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
                 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -44,23 +44,11 @@ export default function RootLayout({ children }) {
                 s.parentNode.insertBefore(t,s)}(window, document,'script',
                 'https://connect.facebook.net/en_US/fbevents.js');
                 fbq('init', '872310448557591');
-              }
-              if (!window.__pageview_sent) {
-                window.__pageview_sent = true;
                 fbq('track', 'PageView', {}, { test_event_code: 'TEST6108' });
               }
             `,
           }}
         />
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=872310448557591&ev=PageView&noscript=1"
-            alt="Meta Pixel"
-          />
-        </noscript>
       </body>
     </html>
   );
