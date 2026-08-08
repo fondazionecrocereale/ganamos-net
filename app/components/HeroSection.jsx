@@ -7,8 +7,16 @@ export default function HeroSection() {
   const whatsappUrl = getWhatsAppLink("Hola quiero usuario");
 
   const handleWhatsAppClick = () => {
-    if (typeof window !== "undefined" && window.fbq) {
-      window.fbq("track", "Contact");
+    if (typeof window !== "undefined") {
+      if (typeof window.fbq === "function") {
+        window.fbq("track", "Contact");
+        console.log("Meta Pixel: Contact event sent successfully");
+      } else if (window._fbq) {
+        window._fbq.push(["track", "Contact"]);
+        console.log("Meta Pixel: Contact event queued");
+      } else {
+        console.warn("Meta Pixel (window.fbq) is not loaded or is blocked by an ad blocker.");
+      }
     }
   };
 
