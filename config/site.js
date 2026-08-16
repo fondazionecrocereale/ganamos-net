@@ -1,9 +1,9 @@
 // Configuración centralizada para Vercel y Next.js
 export const SITE_CONFIG = {
-  name: "Ganamos",
+  name: "Sitio Oficial",
   // Número por defecto en caso de no definir variable en Vercel
   fallbackNumber: "",
-  defaultMessage: "Hola quiero un usuario",
+  defaultMessage: "Hola Sitio Oficial, quiero usuario",
 };
 
 /**

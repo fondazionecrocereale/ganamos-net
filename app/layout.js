@@ -1,17 +1,6 @@
 import Script from "next/script";
 import "./globals.css";
 
-export const metadata = {
-  title: "Ganamos Net - Atención 24/7 & Retiros Inmediatos",
-  description: "Ganamos Net: Tu plataforma de confianza con atención las 24hs, carga mínima $1.000, retiro mínimo $4.000 y transferencias instantáneas por Mercado Pago, Ualá y CBU.",
-  keywords: ["Ganamos Net", "Gana Premium", "cargas 24/7", "retiros inmediatos", "mercado pago", "uala", "casino online argentina"],
-  openGraph: {
-    title: "Ganamos Net - Atención 24/7 & Retiros Inmediatos",
-    description: "Cargas desde $1.000, retiros desde $4.000 las 24 horas del día. Pagos al instante.",
-    images: ["/assets/logo.png"],
-    type: "website",
-  },
-};
 
 export default function RootLayout({ children }) {
   return (

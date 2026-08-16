@@ -7,16 +7,15 @@ export default function LiveStatusBar() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-neon-green opacity-75"></span>
             <span className="relative inline-flex rounded-full h-3 w-3 bg-neon-green"></span>
           </span>
-          <span className="text-gray-200">SISTEMA 24/7 OPERATIVO:</span>
-          <span className="text-neon-green font-bold">Retiros Activos e Inmediatos</span>
+          <span className="text-gray-200">SISTEMA 24/7 OPERATIVO</span>
+          
         </div>
         <div className="hidden sm:flex items-center space-x-4 text-gray-300">
-          <span>⚡ Promedio de pago: <strong className="text-white">1 a 3 minutos</strong></span>
-          <span>🛡️ Pagos 100% Garantizados</span>
+         
         </div>
         <div>
           <a href="#calculadora" className="text-neon-cyan hover:underline font-semibold flex items-center gap-1">
-            <span>Ver Límites</span> &rarr;
+          
           </a>
         </div>
       </div>

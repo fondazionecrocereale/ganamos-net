@@ -29,7 +29,7 @@ export default function HeroSection() {
       <div className="relative inline-block glow-purple-box rounded-full p-1.5 bg-gradient-to-b from-neon-purple via-neon-cyan/50 to-transparent transition-transform hover:scale-105 duration-300">
         <div className="w-44 h-44 sm:w-52 sm:h-52 rounded-full border-4 border-[#2a0a40] overflow-hidden relative">
           <Image
-            alt="Ganamos Net Logo"
+            alt="Sitio Oficial Logo"
             src="/assets/logo.png"
             fill
             sizes="(max-width: 640px) 176px, 208px"
@@ -58,9 +58,6 @@ export default function HeroSection() {
         <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white leading-tight font-heading">
           Atención <span className="text-neon-purple glow-purple">24/7</span>
         </h1>
-        <p className="text-gray-300 text-lg sm:text-2xl font-light">
-          Retiros inmediatos las 24 horas del día. Cargas instantáneas sin esperas.
-        </p>
       </div>
 
       {/* Hero WhatsApp Contact Button */}

@@ -6,15 +6,10 @@ export default function Footer() {
       <div className="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center text-xs text-gray-400 gap-4">
         <div className="flex items-center space-x-2">
           <div className="w-6 h-6 rounded-full relative overflow-hidden">
-            <Image src="/assets/logo.png" alt="Ganamos Net" fill className="object-cover" />
+            <Image src="/assets/logo.png" alt="Sitio Oficial" fill className="object-cover" />
           </div>
-          <span className="font-bold text-white">GANAMOS.NET</span>
-          <span>© 2026 GANA PREMIUM. TODOS LOS DERECHOS RESERVADOS.</span>
-        </div>
-        <div className="flex space-x-6 text-gray-400">
-          <a href="#limites" className="hover:text-neon-purple transition-colors">Términos</a>
-          <a href="#calculadora" className="hover:text-neon-purple transition-colors">Límites</a>
-          <a href="#faq" className="hover:text-neon-purple transition-colors">Ayuda 24/7</a>
+          <span className="font-bold text-white">SITIO OFICIAL</span>
+          <span>© 2026 SITIO OFICIAL. TODOS LOS DERECHOS RESERVADOS.</span>
         </div>
       </div>
 
