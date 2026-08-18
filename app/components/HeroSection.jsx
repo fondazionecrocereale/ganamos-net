@@ -9,11 +9,11 @@ export default function HeroSection() {
   const handleWhatsAppClick = () => {
     if (typeof window !== "undefined") {
       if (typeof window.fbq === "function") {
-        window.fbq("track", "Contact");
-        console.log("Meta Pixel: Contact event sent successfully");
+        window.fbq("track", "Contact", { value: 0.00, currency: "ARS" });
+        console.log("Meta Pixel: Contact event sent successfully with value and currency");
       } else if (window._fbq) {
-        window._fbq.push(["track", "Contact"]);
-        console.log("Meta Pixel: Contact event queued");
+        window._fbq.push(["track", "Contact", { value: 0.00, currency: "ARS" }]);
+        console.log("Meta Pixel: Contact event queued with value and currency");
       } else {
         console.warn("Meta Pixel (window.fbq) is not loaded or is blocked by an ad blocker.");
       }
